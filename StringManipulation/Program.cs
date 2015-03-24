@@ -10,24 +10,26 @@ namespace StringManipulation
     {
         static void Main(string[] args)
         {
-            string hello = "This is some text";
-            var upperHello = hello.ToUpper();
+            //string hello = "This is some text";
+            //var upperHello = hello.ToUpper();
 
-            Console.WriteLine(upperHello);
+            //Console.WriteLine(upperHello);
 
 
-            if (string.IsNullOrWhiteSpace(hello)) 
-            {
+            //if (string.IsNullOrWhiteSpace(hello)) 
+            //{
 
-                Console.WriteLine("Nothing here");
-            }
+            //    Console.WriteLine("Nothing here");
+            //}
 
-            var both = string.Concat(hello, upperHello, "Even More Text");
+            //var both = string.Concat(hello, upperHello, "Even More Text");
 
-            var length = upperHello.Length;
+            //var length = upperHello.Length;
 
-            Console.WriteLine(length);
-            Console.ReadLine();
+            //Console.WriteLine(length);
+            //Console.ReadLine();
+
+
         }
     }
 }
