@@ -83,8 +83,11 @@ namespace StringManipulation
                 Console.Write(reversedString);
             }
 
-            //Insert Line Break
+            //Insert Line Breaks
             Console.WriteLine(" ");
+            //Insert Line Breaks
+            Console.WriteLine(" ");
+
 
             //Correct the order of the array
             Array.Reverse(words);
@@ -98,27 +101,26 @@ namespace StringManipulation
                 Console.Write(nonReversedString);
             }
 
-            //Insert Line Break
+            //Insert Line Breaks
             Console.WriteLine(" ");
+            //Insert Line Breaks
+            Console.WriteLine(" ");
+
 
             //Iterate over each array item
             foreach (var item in words)
             {
                 //Convert Array item to string seperated by commas
                 string commaSeperatedString = (item.ToString() + ",");
+
+                //Get rid of trailing comma
+                string commaSeperatedStringEdit = commaSeperatedString.Remove(commaSeperatedString.Length - 0, -1) + ",";
+
                 //Print to the console
-                Console.Write(commaSeperatedString);
+                Console.Write(commaSeperatedStringEdit);
             }
 
             Console.ReadLine();
-
-            
-
-
-
-
-
-
 
         }
     }
