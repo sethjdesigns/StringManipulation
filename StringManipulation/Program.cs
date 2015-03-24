@@ -34,31 +34,91 @@ namespace StringManipulation
 
 
 
+           // /*
+           // 3.24 Afternoon String Lab NOT OPTIMIZED
+           // */
+
+           ////Instantiate the string as an array of strings
+           //string[] stringArray = new string[] { "This", "is", "a", "string", "of", "text" };
+
+           ////Concat each array index as a single string in reverse order
+           //string stringArrayReverse = (stringArray[5] + " " + stringArray[4] + " " + stringArray[3] + " " + stringArray[2] + " " + stringArray[1] + " " + stringArray[0]);
+
+           ////Print stringArrayReverse to the console
+           //Console.WriteLine(stringArrayReverse);
+
+           ////Concat each array index as a single string in normal order and transform text to uppercase.
+           //string stringArrayUpperCase = (stringArray[0] + " " + stringArray[1] + " " + stringArray[2] + " " + stringArray[3] + " " + stringArray[4] + " " + stringArray[5]).ToUpper();
+
+           ////Print stringArrayUpperCase to the console
+           //Console.WriteLine(stringArrayUpperCase);
+
+           ////Concat every string as a single string seperated by commas
+           //string stringArrayCommas = (stringArray[0] + "," + stringArray[1] + "," + stringArray[2] + "," + stringArray[3] + "," + stringArray[4] + "," + stringArray[5]);
+
+           //Console.WriteLine(stringArrayCommas);
+
+           //Console.ReadLine();
+
             /*
-            3.24 Afternoon String Lab
+            3.24 afternoon string lab OPTIMIZED
             */
 
-           //Instantiate the string as an array of strings
-           string[] stringArray = new string[] { "This", "is", "a", "string", "of", "text" };
+            //Init String
+            Console.WriteLine("Write a sentence, any sentence that you would like!");
+            var inputString = Console.ReadLine();
 
-           //Concat each array index as a single string in reverse order
-           string stringArrayReverse = (stringArray[5] + " " + stringArray[4] + " " + stringArray[3] + " " + stringArray[2] + " " + stringArray[1] + " " + stringArray[0]);
+            //Split words and insert into an array
+            string[] words = inputString.Split(' ');
 
-           //Print stringArrayReverse to the console
-           Console.WriteLine(stringArrayReverse);
+            //Reverse the order of the array
+            Array.Reverse(words);
 
-           //Concat each array index as a single string in normal order and transform text to uppercase.
-           string stringArrayUpperCase = (stringArray[0] + " " + stringArray[1] + " " + stringArray[2] + " " + stringArray[3] + " " + stringArray[4] + " " + stringArray[5]).ToUpper();
+            //Iterate over each array item
+            foreach (var item in words)
+            {
+                //Convert Array item to string
+                string reversedString = item.ToString() + " ";
+                //Print to the console
+                Console.Write(reversedString);
+            }
 
-           //Print stringArrayUpperCase to the console
-           Console.WriteLine(stringArrayUpperCase);
+            //Insert Line Break
+            Console.WriteLine(" ");
 
-           //Concat every string as a single string seperated by commas
-           string stringArrayCommas = (stringArray[0] + "," + stringArray[1] + "," + stringArray[2] + "," + stringArray[3] + "," + stringArray[4] + "," + stringArray[5]);
+            //Correct the order of the array
+            Array.Reverse(words);
 
-           Console.WriteLine(stringArrayCommas);
+            //Iterate over each array item
+            foreach (var item in words)
+            {
+                //Convert Array item to string
+                string nonReversedString = (item.ToString() + " ").ToUpper();
+                //Print to the console
+                Console.Write(nonReversedString);
+            }
 
-           Console.ReadLine();
+            //Insert Line Break
+            Console.WriteLine(" ");
+
+            //Iterate over each array item
+            foreach (var item in words)
+            {
+                //Convert Array item to string seperated by commas
+                string commaSeperatedString = (item.ToString() + ",");
+                //Print to the console
+                Console.Write(commaSeperatedString);
+            }
+
+            Console.ReadLine();
+
+            
+
+
+
+
+
+
 
         }
     }
