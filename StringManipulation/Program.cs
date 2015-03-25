@@ -60,6 +60,11 @@ namespace StringManipulation
 
            //Console.ReadLine();
 
+
+
+
+
+
             /*
             3.24 afternoon string lab OPTIMIZED
             */
@@ -106,18 +111,16 @@ namespace StringManipulation
             //Insert Line Breaks
             Console.WriteLine(" ");
 
-
+            
             //Iterate over each array item
             foreach (var item in words)
             {
                 //Convert Array item to string seperated by commas
                 string commaSeperatedString = (item.ToString() + ",");
 
-                //Get rid of trailing comma
-                string commaSeperatedStringEdit = commaSeperatedString.Remove(commaSeperatedString.Length - 0, -1) + ",";
-
                 //Print to the console
-                Console.Write(commaSeperatedStringEdit);
+                Console.Write(commaSeperatedString);
+
             }
 
             Console.ReadLine();
