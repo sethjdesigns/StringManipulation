@@ -111,16 +111,23 @@ namespace StringManipulation
             //Insert Line Breaks
             Console.WriteLine(" ");
 
-            
+            //Commmas
             //Iterate over each array item
+            string stringsWithCommas;
+
             foreach (var item in words)
             {
                 //Convert Array item to string seperated by commas
                 string commaSeperatedString = (item.ToString() + ",");
 
-                //Print to the console
-                Console.Write(commaSeperatedString);
+                stringsWithCommas = commaSeperatedString.ToString();
 
+                var joinedCommaString = String.Join(" ", commaSeperatedString);
+
+                //Print to the console
+                joinedCommaString = joinedCommaString.Remove(joinedCommaString.Length - 1, 1);
+
+                Console.WriteLine(joinedCommaString);
             }
 
             Console.ReadLine();
